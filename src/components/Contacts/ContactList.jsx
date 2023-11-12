@@ -4,6 +4,7 @@ import { List } from "./ContactList.styled"
 export const ContactList = () => {
 
     return (
+      
         <List>                     
             <ContactListItem />                        
         </List>        

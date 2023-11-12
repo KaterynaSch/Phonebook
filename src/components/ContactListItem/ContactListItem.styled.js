@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 export const ListItem = styled.li`
     display: flex;
+    justify-content :space-between;
     gap: ${p => p.theme.spacing(2)};
     text-transform: capitalize;
 `
 export const DeleteBtn = styled.button`
     font-weight: 500;    
     letter-spacing: 0.04em;
-    width: 100px;
-    height: 26px;
     border: 1px solid ${p => p.theme.colors.borderColor};
     border-radius: ${p => p.theme.radius.m};
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

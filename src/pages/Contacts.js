@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { ContactForm } from "./Form/Form";
-// import { ContactList } from "./Contacts/ContactList";
-// import { ContactFilter } from "./ContactFilter/ContactFilter";
-// import { MainContainer } from "./MainContainer.styled";
+
 import { selectError, selectIsLoading } from "redux/contacts/selectors";
 import { fetchContacts } from "redux/contacts/operations";
 import { ContactForm } from "components/Form/Form";
 import { ContactList } from "components/Contacts/ContactList";
 import { ContactFilter } from "components/ContactFilter/ContactFilter";
-import { MainContainer } from "components/MainContainer.styled";
+import { ContactsContainer } from "components/ContactsContainer.styled";
 
 
 export default function Contacts(){  
@@ -23,8 +20,8 @@ export default function Contacts(){
   }, [dispatch]);
 
   return (
-    <MainContainer>
-      <h1>Phonebook</h1>
+    <ContactsContainer>
+      <h2>Phonebook</h2>
       <ContactForm />
       <h2>Contacts</h2>
       <ContactFilter />
@@ -32,6 +29,6 @@ export default function Contacts(){
       <b>Request in progress...</b>
       }
       <ContactList />      
-    </MainContainer>
+    </ContactsContainer>
   );
 };

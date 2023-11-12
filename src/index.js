@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { store, persistor } from './redux/store';
 import 'modern-normalize';
-// import './styles.css';
+import './styles.css';
 
 const theme = {
   colors: {

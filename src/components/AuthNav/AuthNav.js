@@ -1,15 +1,17 @@
+import { Button } from 'components/Form/Form.styled';
+// import { AuthNavLink } from './AuthNav.styled';
 import { NavLink } from 'react-router-dom';
-// import css from './AuthNav.module.css';
+import { Authwrapper } from './AuthNav.styled';
 
 export const AuthNav = () => {
   return (
-    <div>
+    <Authwrapper>
       <NavLink  to="/register">
-        Register
+        <Button>Register</Button>
       </NavLink>
       <NavLink  to="/login">
-        Log In
+        <Button>Log In</Button>
       </NavLink>
-    </div>
+    </Authwrapper>
   );
 };

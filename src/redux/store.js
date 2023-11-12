@@ -14,7 +14,6 @@ import { authReducer } from './auth/slice';
 import { filterReducer } from './contacts/filterSlice';
 import { contactsReducer } from './contacts/contactsSlice';
 
-// Persisting token field from auth slice to localstorage
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -37,19 +36,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
-
-// import { configureStore } from "@reduxjs/toolkit";
-
-// import { contactsReducer } from "./contacts/contactsSlice";
-// import { filterReducer } from "./contacts/filterSlice";
-
-
-// export const store = configureStore({
-
-//   reducer: {
-//     contacts: contactsReducer,
-//     filter: filterReducer,
-//   },
-  
-// });

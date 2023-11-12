@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { StyledForm, StyledLabel, StyledField, AddContact, StyledErrMessage  } from './Form.styled';
+import { StyledForm, StyledLabel, StyledField, Button, StyledErrMessage  } from './Form.styled';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 
@@ -10,8 +10,8 @@ const formSchema = Yup.object().shape({
     name: Yup.string() 
     .matches(/^[a-zA-Zа-яА-Я]+(([ ' -][a-zA-Zа-яА-Я ])?[a-zA-ЯА-Я]*)*$/, 'The name format is incorrect!')    
     .required('Required'),
-    phone: Yup.string()
-    .matches(/\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}/,'The phone number format is incorrect!') 
+    number: Yup.string()
+    .matches(/\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}/,'The number format is incorrect!') 
     .required('Required'),
 })
 
@@ -20,7 +20,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);  
     
-  const saveContact = ({name, phone}) => {
+  const saveContact = ({name, number}) => {
   
     const isExist = contacts.some(contact => contact.name === name);
      
@@ -29,7 +29,7 @@ export const ContactForm = () => {
       return;
     }
     const newContact = {     
-        name, phone };
+        name, number };
     dispatch(addContact(newContact));    
   }; 
 
@@ -37,7 +37,7 @@ export const ContactForm = () => {
         <Formik
         initialValues={{
           name: '',
-          phone: '',          
+          number: '',          
         }}
         validationSchema={formSchema}        
         onSubmit={(values, actions) => { 
@@ -53,10 +53,10 @@ export const ContactForm = () => {
           </StyledLabel>
           <StyledLabel>
             Number
-          <StyledField  name="phone" type='tel' />
-          <StyledErrMessage name="phone" component="span"/>
+          <StyledField  name="number" type='tel' />
+          <StyledErrMessage name="number" component="span"/>
             </StyledLabel>          
-          <AddContact type="submit">Add contact</AddContact>
+          <Button type="submit">Add contact</Button>
         </StyledForm>
       </Formik>       
     )

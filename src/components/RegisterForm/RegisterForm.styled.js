@@ -1,14 +1,25 @@
 import styled from "styled-components";
 
 
-export const FilterLabel = styled.label`    
+export const FormReg = styled.form `
+    text-align: center;
+    width: 280px;
+    margin: ${p => p.theme.spacing(10)}  auto;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: ${p => p.theme.spacing(6)};
+    border: 1px solid ${p => p.theme.colors.secondaryColor};
+    border-radius: ${p => p.theme.radius.l};
+`
+export const LabelReg = styled.label`
     display: flex;
     flex-direction: column;
     gap: ${p => p.theme.spacing(2)};  
     color: ${p => p.theme.colors.labelColor};
 `
-export const FilterInput = styled.input`  
-   
+
+export const InputReg = styled.input`
     padding: ${p => p.theme.spacing(2)} ${p => p.theme.spacing(4)};
     outline: transparent;
     border: 1px solid ${p => p.theme.colors.borderColor};
