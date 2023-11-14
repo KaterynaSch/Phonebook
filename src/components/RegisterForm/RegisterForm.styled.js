@@ -1,25 +1,24 @@
 import styled from "styled-components";
 
 
-export const FormReg = styled.form `
+export const FormAuth = styled.form `
     text-align: center;
     width: 280px;
     margin: ${p => p.theme.spacing(10)}  auto;
-    padding: 18px;
+    padding: ${p => p.theme.spacing(4)};
     display: flex;
     flex-direction: column;
     gap: ${p => p.theme.spacing(6)};
-    border: 1px solid ${p => p.theme.colors.secondaryColor};
     border-radius: ${p => p.theme.radius.l};
 `
-export const LabelReg = styled.label`
+export const LabelAuth = styled.label`
     display: flex;
     flex-direction: column;
     gap: ${p => p.theme.spacing(2)};  
     color: ${p => p.theme.colors.labelColor};
 `
 
-export const InputReg = styled.input`
+export const InputAuth = styled.input`
     padding: ${p => p.theme.spacing(2)} ${p => p.theme.spacing(4)};
     outline: transparent;
     border: 1px solid ${p => p.theme.colors.borderColor};

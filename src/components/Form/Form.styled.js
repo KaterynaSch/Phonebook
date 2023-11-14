@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { Form, Field, ErrorMessage } from "formik";
 
 export const StyledForm = styled(Form)`
-    /* width: 320px; */
-    padding: 18px;
+    padding: ${p => p.theme.spacing(4)};
     display: flex;
     flex-direction: column;
     gap: ${p => p.theme.spacing(6)};
@@ -39,9 +38,11 @@ export const Button = styled.button`
     background-color: ${p => p.theme.colors.accentColor};
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);        
 
-    &:hover{
+    &:hover,
+    &:focus {
         background-color: ${p => p.theme.colors.secondaryColor};       
     }
+    
 
     @media only screen and (min-width: 768px) {
         font-size: ${p => p.theme.spacing(5)};

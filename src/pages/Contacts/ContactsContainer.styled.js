@@ -9,4 +9,5 @@ export const ContactsContainer = styled.div`
     margin: 0 auto;
     padding: ${p => p.theme.spacing(2)};
     align-items: center;
+
 `

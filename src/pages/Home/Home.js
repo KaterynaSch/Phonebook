@@ -1,6 +1,6 @@
 import { Text } from "components/UserMenu/UserMenu.styled";
 
-import { AccentText, HomeWrapper, IconContainer, PhoneIcon, Title, UserIcon, ZoomInIcon } from "../components/Home.styled";
+import { AccentText, HomeWrapper, IconContainer, PhoneIcon, Title, UserIcon, ZoomInIcon } from "./Home.styled";
 
   
   export default function Home() {

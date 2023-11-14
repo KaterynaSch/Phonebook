@@ -7,7 +7,6 @@ export const Header = styled.header `
     align-items: center;
     padding-top: ${p => p.theme.spacing(2)};     
     padding-bottom: ${p => p.theme.spacing(2)};   
-    border-bottom: 1px solid ${p => p.theme.colors.borderColor};
-`
-   
-  
+    border-bottom: 1px solid ${p => p.theme.colors.darkColor};
+    
+`   

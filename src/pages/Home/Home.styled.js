@@ -14,6 +14,7 @@ export const Title = styled.h1`
     font-weight: 500;
     font-size: ${p => p.theme.spacing(8)};
     text-align: center;
+    color: ${p => p.theme.colors.darkColor};
 
     @media only screen and (min-width: 768px) {
         font-size: ${p => p.theme.spacing(12)};

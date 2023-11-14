@@ -16,7 +16,8 @@ export const DeleteBtn = styled.button`
     background-color: ${p => p.theme.colors.white};    
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-     &:hover{ 
+     &:hover,
+     &:focus{ 
         color: ${p => p.theme.colors.white};
         background-color: ${p => p.theme.colors.secondaryColor}; 
     } 

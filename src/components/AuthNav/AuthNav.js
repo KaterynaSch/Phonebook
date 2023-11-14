@@ -1,5 +1,4 @@
 import { Button } from 'components/Form/Form.styled';
-// import { AuthNavLink } from './AuthNav.styled';
 import { NavLink } from 'react-router-dom';
 import { Authwrapper } from './AuthNav.styled';
 

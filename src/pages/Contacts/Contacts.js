@@ -6,7 +6,7 @@ import { fetchContacts } from "redux/contacts/operations";
 import { ContactForm } from "components/Form/Form";
 import { ContactList } from "components/Contacts/ContactList";
 import { ContactFilter } from "components/ContactFilter/ContactFilter";
-import { ContactsContainer } from "components/ContactsContainer.styled";
+import { ContactsContainer } from "pages/Contacts/ContactsContainer.styled";
 
 
 export default function Contacts(){  
